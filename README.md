@@ -1,5 +1,22 @@
 # IsEazy - Backend Test
 
+## Notas
+El proyecto no tienen la estructura propia de Laravel.
+He intentado implementar una organización del código con capas de:
+
+-Infraestructura.
+
+-Aplicación.
+
+-Dominio.
+
+Para que la prueba resulte más atractiva.
+
+He implementado un CommandBus para manejar los casos que suponen un cambio de estado de la aplicación.
+Dichos casos de uso se efectuan de forma transaccional, ya que todos los comandos despachados por el CommanBus
+tiene un wraper para manejar la transaccion de base de datos, la cual abrimos y controlamos en el CommanBus.
+
+
 ## Instalación usando Makefile
 
 ````shell
